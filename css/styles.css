@@ -39,12 +39,19 @@ a {
 }
 
 
-
+footer {
+    background-color: rgb(233, 233, 233);
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 header { 
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 
 }
 
@@ -57,9 +64,12 @@ main {
 
 .name-furniture {
   
-   font-weight: 400;
-   font-size: 3em;
+   font-size: 5em;    
+   font-weight: 600;
+   color: rgb(71, 71, 71);
    margin-bottom: 10px;
+   text-align: center;
+   margin-left: 15px;
    
 }
 
@@ -68,12 +78,23 @@ main {
     font-size: 1.5em;
     font-weight: 100;
     margin-bottom: 15px;
+    text-align: left;
+    margin: 20px;
     
+}
+
+.description h3{
+    text-align: center;
+}
+
+.description {
+    text-align: center;
 }
 
 .price {
     font-size: 1.3em;
     margin-bottom: 5px;
+    
 }
 
 .reviews {
@@ -85,14 +106,21 @@ main {
 
 }
 
+.reviews-title {
+    font-weight: 100;
+}
+
 
 .button-like {
-    background-color: rgb(136, 136, 136);
-    transition: 0.5s;   
+   
+    background-color: rgb(153, 153, 153); 
+    transition: 0.5s;  
     color: white;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
+    border-radius: 100px;  
+    margin: 5px;
+   
+    
+    
 }
 
 .button-like:hover {
@@ -104,12 +132,22 @@ main {
     color: white;
     text-decoration: none;
     font-size: 1.5em;
+    
 }
+
+.button-like p{
+   text-align: center;
+    
+}
+
+
 
 .button-like i {
     
     font-size: 1.5em;
-    margin-left: 10px;
+    padding: 10px;
+  
+
 }
 
 .button-add {
@@ -185,9 +223,9 @@ main {
 }
 
 .nav-logo {
-    font-size: 2.1rem;
+    font-size:3em;
     font-weight: 500;
-    color: #482ff7;
+    color: #616161;
 }
 
 .icons {
@@ -258,14 +296,16 @@ aside {
 }
 
 
-footer {
+partners {
     text-align: center;
 }
 
-footer p{
+partners p{
     font-weight: 100;
     font-size: 2em;
 }
+
+
 
 .partners-logos {
     display: flex;
@@ -276,9 +316,30 @@ footer p{
 
 .partners-logos img {
     max-width: 100%;
+    justify-content: center;
+    margin-left: 80px;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-menu {
+    font-size: 1.8em;
+    color:rgb(104, 104, 104);
+    font-family:sans-serif;    
+    text-align: center;
+    line-height: 1.8;
+
+}
+
+.footer-footer {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(182, 182, 182);
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -339,18 +400,16 @@ footer p{
 
 
 @media (min-width: 600px){
-    .nav-logo {
-        color: red;
-    }
+   
   
+    
     aside {
     text-align: center;
     width: 100%;
     max-width: 100%;
-   
-    
-}
+   }
 
+   
 .related-products {
 
     padding:30px;
@@ -361,7 +420,7 @@ footer p{
       
 }
 .card {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .card img {
@@ -407,25 +466,117 @@ footer p{
     color:rgb(255, 255, 255);
 }
     
-footer {
+partners {
     text-align: center;
 }
 
-footer p{
+partners p{
     font-weight: 100;
     font-size: 2em;
 }
 
 .partners-logos {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;   
+    width: 100%;
    
 }
 
-.partners-logos img {
-    max-width: 50%;
-}
+
 
 
   }
+
+  @media (min-width: 700px){
+
+
+    
+    .name-furniture {
+        font-size: 5em;
+        font-weight: 600;
+        color: rgb(71, 71, 71);
+        
+    }
+
+
+    .button-like i {
+    
+        font-size: 1.5em;
+        padding: 5px;
+      
+    
+    }
+
+    .buttons-responsive {
+        display: flex;
+        justify-content: center;        
+        flex-direction: row;
+        max-width: 400px;
+        max-height: 80px;
+        
+       
+    }
+
+    .description {
+        align-items: center;
+    }
+    
+
+
+   
+
+    .name-furniture { 
+      
+        text-align: left;
+        font-size: 8em;
+        
+     }
+
+.price {
+    text-align: left;
+}
+   
+
+.related-products {
+   text-align: center;
+   justify-content: center;
+  
+  
+}
+
+.gallery {
+    display: flex;
+    padding: 50px;
+
+  }
+
+  .gallery img{
+   margin-right: 15px;
+   box-shadow: 10px 10px 10px rgb(241, 241, 241);
+  
+
+   
+
+  }
+
+
+  partners img{
+
+    max-height: 200px;
+
+  }
+
+  
+
+  }
+
+  @media (min-width: 1200px){ 
+
+   .buttons-responsive {
+       margin-left: 130px;
+   }
+
+  }
+
+
