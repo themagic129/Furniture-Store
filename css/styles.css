@@ -242,7 +242,7 @@ aside {
 
 .related-products {
 
-    padding: 80px;
+    padding: 50px;
     width: 100%;    
     display: flex;
     flex-direction: column;
@@ -338,7 +338,7 @@ footer {
 .footer-footer {
     height: 30px;
     width: 100%;
-    background-color: rgb(182, 182, 182);
+    background-color: rgb(158, 158, 158);
 }
 
 
