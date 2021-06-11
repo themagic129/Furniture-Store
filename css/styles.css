@@ -1,8 +1,431 @@
-body{
-margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+   
 }
 
-header {
+
+html {
+    font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery img {
+    max-height: 600px;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+header { 
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.name-furniture {
+  
+   font-weight: 400;
+   font-size: 3em;
+   margin-bottom: 10px;
+   
+}
+
+.description p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 15px;
+    
+}
+
+.price {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.reviews {
+   
+    display:inline-flex;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 10px;
+
+}
+
+
+.button-like {
+    background-color: rgb(136, 136, 136);
+    transition: 0.5s;   
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.button-like:hover {
+    background-color: rgb(126, 126, 126);
+    transition: 0.5s;
+}
+
+.button-like a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.button-like i {
+    
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.button-add {
+    background-color: rgb(31, 31, 31); 
+    transition: 0.5s;  
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+   
+}
+
+.button-add a{
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.button-add i {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.button-add:hover {
+    background-color: rgb(54, 54, 54);
+    transition: 0.5s ease;
+}
+
+.number-reviews {
+    margin-left: 10px;
+    color: rgb(231, 201, 28);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+.icons {
+    font-size: 1.5em;
+    margin-left:5rem ;
+}
+
+aside {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;    
+    
+}
+
+.related-products {
+
+    padding: 80px;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+      
+}
+.card {
+    margin-left: 30px;
+}
+
+.card img {
+    text-align: center;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+
+
+.card .name{
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.card p{
+  font-size: 1.5em;
+  font-weight: 100;
+  display: inline-flex;
+}
+
+.btn-add-cart {
+   
+    background-color: rgb(31, 31, 31); 
+    transition: 0.5s;  
+    color: white;
+    border-radius: 15px;    
+    padding: 10px;
+    border: 1px solid rgb(117, 117, 117);
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+}
+
+.btn-add-cart:hover {
+    background-color: rgb(54, 54, 54);
+    transition: 0.5s ease;
+}
+
+.btn-add-cart a{
+    color:rgb(255, 255, 255);
+}
+
+
+footer {
+    text-align: center;
+}
+
+footer p{
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;   
+   
+}
+
+.partners-logos img {
+    max-width: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    
+    .nav-logo {
+        font-size: 3em;
+        
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;        
+        cursor: pointer;
+        transform: translateX(100px);
+    }
+
+    .icons {
+        display: none;
+    }
+    
+ 
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+@media (min-width: 600px){
+    .nav-logo {
+        color: red;
+    }
+  
+    aside {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+   
+    
+}
+
+.related-products {
+
+    padding:30px;
+    width: 100%;    
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+      
+}
+.card {
+    margin-left: 30px;
+}
+
+.card img {
+    text-align: center;
+    max-width: 80%;
+    max-height: 100px;
+}
+
+
+
+.card .name{
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.card p{
+  font-size: 1.5em;
+  font-weight: 100;
+  display: inline-flex;
+}
+
+.btn-add-cart {
+   
+    background-color: rgb(31, 31, 31); 
+    transition: 0.5s;  
+    color: white;
+    border-radius: 15px;    
+    width: 100px;
+    border: 1px solid rgb(117, 117, 117);
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+
+}
+
+.btn-add-cart:hover {
+    background-color: rgb(54, 54, 54);
+    transition: 0.5s ease;
+}
+
+.btn-add-cart a{
+    color:rgb(255, 255, 255);
+}
+    
+footer {
+    text-align: center;
+}
+
+footer p{
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;   
+   
+}
+
+.partners-logos img {
+    max-width: 50%;
+}
+
+
+  }

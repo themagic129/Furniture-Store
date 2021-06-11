@@ -17,26 +17,37 @@
 
 <body>
 
-    <header>
-        <div class="logo">
-            <h3>My Store</h3>
-        </div>
-
+    <header class="header">
         <!--Main Menu-->
-        <nav>
-            <ul>
-                <li>Start page</li>
-                <li>About us</li>
-                <li>Pricing</li>
-                <li>Products</li>
-                <li>Contact</li>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">My Store</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-search"></i>
+            </div>
         </nav>
 
-        <div class="icons">
-            <i class="fas fa-user"></i>
-            <i class="fas fa-search"></i>
-        </div>
+
     </header>
 
     <main>
@@ -47,20 +58,133 @@
             <div class="gallery">
                 <img src="img/imgbin_modern-sofa-png.png" alt="Armchair">
 
-                <div class="reviews">Reviews</div>
-                <div class="reviews-icons">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+
+
+                <!--Description of the product-->
+                <div class="description">
+                    <div class="name-furniture">Armchair room design</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed, qui esse sunt modi facilis
+                        tempora quaerat.</p>
+
+                    <div class="price">
+                        <h3>Price $250</h3>
+                    </div>
                 </div>
+
+                <div class="reviews">
+                    <p>Reviews</p>
+                    <div class="number-reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div> <br>
+
+
+                <div class="button-like"><a href=""><i class="fal fa-heart"></i></a></div>
+                <div class="button-add"><a href="#">Add to cart</a><i class="fas fa-shopping-cart"></i></div>
+
             </div>
+
+            <!--Other recommended or related products-->
+            <aside>
+                <div class="related-products">
+                    <div class="card">
+                        <img src="img/Lamp.jpg" alt="">
+                        <div class="name">
+                            <h3>Grey armchair</h3>
+                        </div>
+                        <p>$150</p>
+
+                        <div class="btn-add-cart"><a href="#">Add to cart</a></div>
+
+                    </div>
+
+                    <div class="card">
+                        <img src="img/chair.jpg" alt="">
+                        <div class="name">
+                            <h3>Grey armchair</h3>
+                        </div>
+                        <p>$150</p>
+
+                        <div class="btn-add-cart"><a href="#">Add to cart</a></div>
+
+                    </div>
+
+                    <div class="card">
+                        <img src="img/imgbin_computer-desk-standing-desk-png.png" alt="">
+                        <div class="name">
+                            <h3>Grey armchair</h3>
+                        </div>
+                        <p>$150</p>
+
+                        <div class="btn-add-cart"><a href="#">Add to cart</a></div>
+
+                    </div>
+
+                    <div class="card">
+                        <img src="img/Lamp.jpg" alt="">
+                        <div class="name">
+                            <h3>Grey armchair</h3>
+                        </div>
+                        <p>$150</p>
+
+                        <div class="btn-add-cart"><a href="#">Add to cart</a></div>
+
+                    </div>
+
+                    <div class="card">
+                        <img src="img/chair.jpg" alt="">
+                        <div class="name">
+                            <h3>Grey armchair</h3>
+                        </div>
+                        <p>$150</p>
+
+                        <div class="btn-add-cart"><a href="#">Add to cart</a></div>
+
+                    </div>
+
+
+
+                </div>
+            </aside>
         </div>
     </main>
     <!--End Main Container-->
 
+    <footer>
 
+        <p>Our Partners</p>
+        <div class="partners-logos">
+            <img src="img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
 
 </body>
 
